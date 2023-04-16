@@ -4,21 +4,35 @@ import 'package:u_and_i/screen/home_screen.dart';
 void main(){
   runApp(
     MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'sunflower',
+        textTheme: TextTheme(
+          headline1: TextStyle(
+            color: Colors.white,
+            fontSize: 80.0,
+            fontWeight: FontWeight.w700, // 글 두께
+            fontFamily: 'parisienne',
+          ),
+
+          headline2: TextStyle(
+            color: Colors.white,
+            fontSize: 50.0,
+            fontWeight: FontWeight.w700,
+          ),
+
+          bodyText1: TextStyle(
+            color: Colors.white,
+            fontSize: 30.0,
+          ),
+
+          bodyText2: TextStyle(
+            color: Colors.white,
+            fontSize: 20.0,
+          ),
+        ),
+      ),
+
       home: HomeScreen(),
     )
   );
-}
-
-class _DDay extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return Text('D-Day Widget');
-  }
-}
-
-class _CoupleImage extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return Text('Couple Image Widget');
-  }
 }
